@@ -17,7 +17,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: white; 
 }
 
 .main form{
@@ -77,4 +77,52 @@
 .main .container header .img-right{
  float: right;
  margin-right: -6em;
+}
+
+
+/* menu style */
+
+.main .menu{ 
+    text-align: center;
+    width: 100%;
+    margin-top: -70%; 
+}
+
+.main .menu-section{ 
+    display: flex;
+    flex-direction: column;
+    padding: 2em; 
+    width: 100%;
+    height: 10em;
+}
+
+.main  .menu-section a{
+    width: 100%; 
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    color: black;
+    text-decoration: none;
+}
+.main  .menu-section a img{
+    width: 40px;
+    height: 40px; 
+    margin-right: 1em;
+}
+
+
+/* here begins the style of the vagas page  */
+
+
+.main .menu a img{
+    transform: translateX(10em);
+}
+
+.main   #table{
+    background-color: rgb(224, 241, 255); 
+    box-shadow: 0  0 5px black ;
+    height: 10em;
+
 }

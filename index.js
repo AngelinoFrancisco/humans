@@ -6,6 +6,25 @@ const app = express()
 const candidato = require("./routes/candidato")
 const empresa = require("./routes/empresa")
 const register = require("./routes/register")
+const session = require("express-session")
+const Sequelize = require('sequelize');
+const sequelize = require("./models/db")
+
+
+sequelize.authenticate().then(() => {
+  console.log('Connection has been established successfully.');
+}).catch((error) => {
+  console.error('Unable to connect to the database: ', error);
+});
+ 
+
+app.use(session({
+  secret: 'segredoSecret',
+  resave: false,
+  saveUninitialized: true
+}));
+
+
 
 
 app.use(express.static("public"))
